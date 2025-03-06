@@ -8,9 +8,8 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-   base: '/Bakerywebsite/',
-  
-  
+   base: '/Bakery-website/',
+   
   css: {
     preprocessorOptions: {
       css: {
