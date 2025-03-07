@@ -20,7 +20,7 @@ const PastryCard = ({ pastry }) => {
         <div className="flex items-center mt-2">
           <span className="bg-[#F8BBD0] text-xl font-bold text-[#5D4037] px-4 py-0.5 rounded-lg">1 Pc</span>
           
-          <div className="flex px-2 py-1 items-center ml-5">
+          <div className="flex px-2 py-1 border rounded-lg items-center ml-5">
             <button
               className="px-2 font-bold border-2 rounded-2xl"
               onClick={() => setQuantity((prev) => Math.max(prev - 1, 1))}

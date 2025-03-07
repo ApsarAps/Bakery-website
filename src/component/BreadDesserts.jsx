@@ -36,19 +36,20 @@ const pastries = [
 
 export const BreadDesserts = () => {
   return (
-    <div>
-      <SearchBar/>
-         
-      <h2 className="text-center text-[#5D4037] underline text-3xl font-bold  mb-6">BREAD/BUN</h2>
-      
+    <div id="BreadDesserts" className="px-4 py-6 md:px-8">
+      <SearchBar />
+
+      <h2 className="text-center text-[#5D4037] underline text-2xl md:text-3xl font-bold mb-6">
+        BREAD / BUN
+      </h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {pastries.map((pastry) => (
-            <PastryCard key={pastry.id} pastry={pastry} />
+          <PastryCard key={pastry.id} pastry={pastry} />
         ))}
       </div>
-      <EnquiryForm />
-    
 
+      <EnquiryForm />
     </div>
   )
 }

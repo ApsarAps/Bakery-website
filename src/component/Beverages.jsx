@@ -32,20 +32,21 @@ const beverages = [
 
 export const Beverages = () => {
   return (
-    <div id="Beverages">
-          <SearchBar />
+    <div id="Beverages" className="px-4 py-6 md:px-8">
+      <SearchBar />
 
-    <h2 className="text-center underline text-2xl md:text-3xl font-bold text-[#5D4037] mb-6">
-      BEVERAGES
-    </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {beverages.map((beverage) => (
-        <PastryCard key={beverage.id} pastry={beverage} />
-        
-      ))}
+      <h2 className="text-center underline text-2xl md:text-3xl font-bold text-[#5D4037] mb-6">
+        BEVERAGES
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {beverages.map((beverage) => (
+          <PastryCard key={beverage.id} pastry={beverage} />
+        ))}
+      </div>
+
+      <EnquiryForm />
     </div>
-    <EnquiryForm />
-  </div>
 
 
   )

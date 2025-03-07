@@ -240,37 +240,37 @@ export const ThemeCakes = () => {
           </div>
         )}
 
-        <h1 className="text-3xl text-[#5D4037] text-center my-8 font-bold underline">THEME CAKES</h1>
+<h1 className="text-3xl text-[#5D4037] text-center my-8 font-bold underline">THEME CAKES</h1>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center">
-          {themes.map((theme) => (
-            <div
-              key={theme.name}
-              onClick={() => setSelectedCategory(theme.name)}
-              className="cursor-pointer transform transition-transform duration-300 hover:scale-110 text-center"
-            >
-              <img
-                src={theme.image}
-                alt={theme.name}
-                className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg mx-auto"
-              />
-              <p className="font-semibold mt-1">{theme.name}</p>
-            </div>
-          ))}
-        </div>
-
-        <h2 className="text-3xl text-[#5D4037] text-center font-bold underline mt-6">{selectedCategory} Cakes</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-          {cakeData[selectedCategory]?.length > 0 ? (
-            cakeData[selectedCategory].map((cake) => <CakeCards key={cake.id} cake={cake} />)
-          ) : (
-            <p className="text-center col-span-3 font-semibold text-lg">No cakes available.</p>
-          )}
-        </div>
-      </div>
-      <EnquiryForm />
-   
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center">
+  {themes.map((theme) => (
+    <div
+      key={theme.name}
+      onClick={() => setSelectedCategory(theme.name)}
+      className="cursor-pointer transform transition-transform duration-300 hover:scale-110 text-center"
+    >
+      <img
+        src={theme.image}
+        alt={theme.name}
+        className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg mx-auto"
+      />
+      <p className="font-semibold mt-1">{theme.name}</p>
     </div>
+  ))}
+</div>
+
+<h2 className="text-3xl text-[#5D4037] text-center font-bold underline mt-6">{selectedCategory} Cakes</h2>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+  {cakeData[selectedCategory]?.length > 0 ? (
+    cakeData[selectedCategory].map((cake) => <CakeCards key={cake.id} cake={cake} />)
+  ) : (
+    <p className="text-center col-span-3 font-semibold text-lg">No cakes available.</p>
+  )}
+</div>
+</div>
+<EnquiryForm />
+
+</div>
   );
 };
